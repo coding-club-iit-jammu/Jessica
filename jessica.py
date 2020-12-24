@@ -83,6 +83,7 @@ async def update(ctx):
     for member in ctx.guild.members:
         if(str(member.id) in user_map):
             await give_role(member)
+            print("role_updated", member.id)            
     return await ctx.send("All member`s roles are updated")
 
 
